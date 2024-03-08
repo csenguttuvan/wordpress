@@ -1,0 +1,29 @@
+Version '1'
+
+Services:
+
+  wordpress::
+    image: wordpress
+    ports::
+     - 8383:80
+    environment:
+     WORDPRESS_DB_HOST: mysql
+     WORDPRESS_DB_NAME: wordpress
+     WORDPRESS_DB_USER: example
+     WORDPRESS_DB_PASSWORD: Goldsmith1992!
+    volumes:
+     - ./wordpress-data:/var/www/html
+     
+     
+    mysql:
+     image: mariadb
+     environment:
+       MYSQL_ROOT_PASSWORD: Goldsmith1992!
+       MYSQL_DATABASE: woordpress       
+       MYSQL_USER: chris
+       MYSQL__PASSWORD: Goldsmith1992!
+     volumes:
+      - mysql-data:/var/lib/mysql
+      
+      
+      

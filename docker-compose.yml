@@ -5,7 +5,7 @@ services:
     links:
       - wordpress_db:mysql #Linked to second container with DB
     ports:
-      - 8080:80 #Port 80 from the docker container will be linked to port 8080 of the host machine
+      - 8282:80 #Port 80 from the docker container will be linked to port 8080 of the host machine
   wordpress_db: #Name of second container
     image: mariadb
     restart: always
